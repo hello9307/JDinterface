@@ -1,0 +1,383 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-12 20:43:42
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-10-16 10:08:37
+*/
+body,div,ul,li,input,button{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+.floatfix {
+	*zoom: 1;
+}
+.floatfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+._header img{
+	display: block;
+	/* 消除边距 */
+}
+._nav{
+	height: 30px;
+	background: #ddd;
+}
+._nav .center{
+	width: 1190px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row;
+}
+._nav .center .left{
+	padding-left: 240px;
+	width: 260px;
+}
+._nav .center .left span{
+	display: inline-block;
+	line-height: 30px;
+	color: red;
+}
+._nav .center .right ul{
+	height: 30px;
+	line-height: 30px;
+}
+._nav .center .right li{
+	float: left;
+}
+._nav .center .right li:nth-child(2n){
+	width: 1px;
+	height: 15px;
+	background-color: #222;
+	margin-top: 8px;
+}
+._nav .center .right li>a{
+	font-size: 14px;
+	display: inline-block;
+	padding: 0 5px;
+}
+._nav .center .right li a:hover{
+	color: red;
+	background-color: #fff;
+}
+/* 出现一个问题 */
+/* #hnpl_father{
+	position: relative;
+}
+#hnpl{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 300px;
+} */
+._search{
+	display: flex;
+	flex-flow: row;
+	width: 1190px;
+	margin: 0 auto;
+	height: 180px;
+}
+._search div:nth-child(1) img{
+	width: 230px;
+	height: 210px;
+	margin-top: -30px;
+}
+._search>div:nth-child(2){
+	position: relative;
+	width: 960px;
+}
+._search .search>div:nth-child(1){
+	padding-left: 100px;
+	margin-top: 30px;
+	height: 50px;
+	line-height: 50px;
+}
+._search .search>div:nth-child(1) input{
+	background: url('../images/bg.png')right center no-repeat;
+	padding: 0 60px 0 10px;
+	vertical-align: middle;
+	height: 40px;
+	width: 400px;
+	border: 1px solid red;
+}
+._search .search>div:nth-child(1)>button:nth-child(2){
+	margin-left: -5px;
+	vertical-align: middle;
+	height: 42px;
+	width: 42px;
+	background: red;
+}
+._search .search>div:nth-child(1)>button:nth-child(2) .iconfont{
+	color: white;
+	font-size: 24px;
+}
+._search .search>div:nth-child(1)>button:nth-child(3){
+	color: red;
+	margin-left: 50px;
+	vertical-align: middle;
+	width: 160px;
+	height: 40px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+._search .search>div:nth-child(2){
+	margin-top: 10px;
+	padding-left: 100px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+}
+._search .search>div:nth-child(2) a{
+	padding: 0 5px;
+}
+._search .search>div:nth-child(2) li:nth-child(1) a{
+	color: red;
+}
+._search .search>div:nth-child(3){
+	padding-left: 50px;
+	margin-top: 20px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+}
+._search .search>div:nth-child(3) a{
+	padding: 0 12px;
+}
+._search .search>div:nth-child(3) .bod{
+	margin-top: 15px;
+	height: 20px;
+	width: 1px;
+	background: #aaa;
+}
+._search .search>div:nth-child(3) li:last-child a{
+	display: inline-block;
+	height: 50px;
+	overflow: hidden;
+	padding-left: 40px;
+}
+._search .search li{
+	float: left;
+}
+.two{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	right: 0;
+	top: 0;
+}
+
+
+._container{
+	width: 1190px;
+	margin: 0 auto;
+	height: 100px;
+	display: flex;
+	flex-flow: row;
+}
+._container .left{
+	padding: 10px 10px;
+	width: 210px;
+	height: 580px;
+	background-color: #444;
+}
+._container>.left li{
+	margin-top: 10px;
+	color: #fff;
+}
+._container>.left li a{
+	color: #fff;
+	display: inline-block;
+	padding: 2px 5px;
+}
+._container>.center{
+	width: 730px;
+	margin: 0 10px;
+}
+._container .center>div:nth-child(1){
+	height: 425px;
+}
+
+
+#carousel {
+    position: relative;
+    width: 725px;
+    height: 400px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+#list {
+    position: absolute;
+    z-index: 1;
+    width: 7250px;
+    height: 400px;
+}
+
+#list img {
+    float: left;
+    width: 725px;
+    height: 400px;
+}
+
+#buttons {
+    position: absolute;
+    left: 250px;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 160px;
+}
+
+#buttons span {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+#carousel .arrow {
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+#carousel .arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+
+#carousel:hover .arrow {
+    display: block;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+
+._container .center>div:nth-child(2){
+	height: 165px;
+	margin-top: 10px;
+	display: flex;
+	flex-flow: row;
+}
+._container .center>div:nth-child(2)>div:nth-child(1){
+	height: 100%;
+	flex: 1;
+}
+._container .center>div:nth-child(2)>div:nth-child(2){
+	height: 100%;
+	flex: 1;
+	margin-left: 10px;
+}
+._container .center>div:nth-child(2)>div img{
+	width: 100%;
+	height: 100%;
+}
+._container .right{
+	border: 1px solid #fff;
+	width: 208px;
+	height: 598px;
+}
+._container .right .top{
+	border: 1px solid #fff;
+	border-bottom: 1px solid #aaa;
+	height: 138px;
+}
+._container .right .top>div{
+	margin: 15px 0;
+	padding-left: 60px;
+	background: url(../images/logo2.png)no-repeat;
+	background-size: 60px 60px;
+}
+._container .right .top button{
+	padding: 5px 10px;
+	margin-left: 10px;
+	border: 2px solid red;
+	color: red;
+	background-color: #fff;
+}
+._container .right .top>div a{
+	display: inline-block;
+	padding: 5px 0;
+}
+._container .right .center{
+	height: 170px;
+	margin: 0 0 20px 10px;
+}
+#myTab .menu a:hover{
+	color: #f00;
+}
+#myTab .menu ul{
+	height:30px;
+}
+#myTab .menu ul li{
+	float:left;
+	list-style:none;
+	width:50px;
+	height:30px;
+	color: #000;
+	text-align:center;
+	line-height:30px;
+	margin-right:3px;
+}
+#myTab .menu ul li #partingLine{
+	width: 1px;
+	height: 15px;
+	background-color: gray;
+}
+#myTab .menu ul li a{
+	text-decoration:none;
+}
+#myTab .box{
+	height:150px;
+	padding-left: 10px; 
+}
+#myTab .box p{
+	line-height: 30px;
+}
+#myTab .box .hide{
+	display:none;
+}
+._container .right .bottom{
+	height: 270px;
+	margin-left: 10px;
+}
+._container .right .bottom .iconfont{
+	display: inline-block;
+	font-size: 36px;
+	padding: 5px; 
+}
